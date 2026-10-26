@@ -96,11 +96,17 @@ img {
     gap: 28px;
   }
 
-  .about-pic {
-    flex-basis: 200px;
-    width: 200px;
-    margin: 0;
-  }
+.about-pic {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center top;
+  margin: 0 auto;
+  border-radius: 12px;
+}
 
   .about-text {
     flex: 1 1 260px;
@@ -110,18 +116,16 @@ img {
 
 /* Mobile phones */
 @media screen and (max-width: 600px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 24px;
-  }
-
   .about-pic {
-    width: min(58vw, 200px);
-    flex: 0 1 auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    object-position: center top;
     margin: 0 auto;
   }
+}
 
   .about-text {
     width: 100%;
